@@ -127,6 +127,7 @@ object main_unit_form: Tmain_unit_form
       Height = 34
       Anchors = [akTop, akRight]
       Caption = 'DHDC CHK'
+      Enabled = False
       TabOrder = 5
       OnClick = BitBtn6Click
     end
