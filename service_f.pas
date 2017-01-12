@@ -32,6 +32,9 @@ type
     procedure BitBtn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure BitBtn4Click(Sender: TObject);
+    procedure show_visitDBTableView1CellDblClick(Sender: TcxCustomGridTableView;
+      ACellViewInfo: TcxGridTableDataCellViewInfo; AButton: TMouseButton;
+      AShift: TShiftState; var AHandled: Boolean);
   private
     { Private declarations }
   public
@@ -71,6 +74,18 @@ begin
     QService.Close;
     QService.Params.ParamValues['cid'] := cid;
     QService.Open;
+end;
+
+procedure Tservice_form.show_visitDBTableView1CellDblClick(
+  Sender: TcxCustomGridTableView; ACellViewInfo: TcxGridTableDataCellViewInfo;
+  AButton: TMouseButton; AShift: TShiftState; var AHandled: Boolean);
+begin
+    miniEMR_form := TminiEMR_form.Create(application);
+    miniEMR_form.hospcode := QService.FieldByName('hospcode').AsString;
+    miniEMR_form.pid := QService.FieldByName('pid').AsString;
+    miniEMR_form.seq := QService.FieldByName('seq').AsString;
+    miniEMR_form.ShowModal;
+    miniEMR_form.Free;
 end;
 
 end.

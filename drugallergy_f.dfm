@@ -51,7 +51,11 @@ object drugallergy_form: Tdrugallergy_form
       DataController.Summary.FooterSummaryItems = <>
       DataController.Summary.SummaryGroups = <>
       Filtering.ColumnFilteredItemsList = True
-      OptionsData.Appending = True
+      OptionsData.CancelOnExit = False
+      OptionsData.Deleting = False
+      OptionsData.DeletingConfirmation = False
+      OptionsData.Editing = False
+      OptionsData.Inserting = False
       OptionsView.GroupByBox = False
       object show_visitDBTableView1DNAME: TcxGridDBColumn
         DataBinding.FieldName = 'DNAME'
@@ -106,6 +110,7 @@ object drugallergy_form: Tdrugallergy_form
       '#WHERE p.cid = 3580400323303'
       ''
       'ORDER BY d.DATERECORD desc')
+    ReadOnly = True
     Left = 272
     Top = 104
     ParamData = <

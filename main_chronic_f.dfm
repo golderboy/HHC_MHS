@@ -37,8 +37,6 @@ object main_chronic_form: Tmain_chronic_form
     Height = 506
     Align = alRight
     TabOrder = 1
-    ExplicitLeft = 571
-    ExplicitTop = 39
     DesignSize = (
       199
       506)
@@ -117,7 +115,7 @@ object main_chronic_form: Tmain_chronic_form
     end
   end
   object S_chronic: TMyQuery
-    Connection = DataModule1.Connect
+    Connection = DataModule1.connect_db
     SQL.Strings = (
       'SELECT c.* '
       'from person p '

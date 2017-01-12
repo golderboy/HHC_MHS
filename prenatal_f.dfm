@@ -29,7 +29,6 @@ object prenatal_form: Tprenatal_form
     Font.Style = [fsBold]
     ParentFont = False
     ImageIndex = 0
-    ExplicitWidth = 738
   end
   object Panel2: TPanel
     Left = 0
@@ -38,8 +37,6 @@ object prenatal_form: Tprenatal_form
     Height = 32
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 511
-    ExplicitWidth = 738
     DesignSize = (
       762
       32)
@@ -52,7 +49,6 @@ object prenatal_form: Tprenatal_form
       Caption = 'EXIT'
       TabOrder = 0
       OnClick = BitBtn4Click
-      ExplicitLeft = 545
     end
   end
   object show_visit: TcxGrid
@@ -69,8 +65,6 @@ object prenatal_form: Tprenatal_form
     Font.Style = []
     ParentFont = False
     TabOrder = 2
-    ExplicitLeft = 8
-    ExplicitTop = 20
     object show_visitDBTableView1: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
       DataController.DataSource = DService
@@ -79,6 +73,11 @@ object prenatal_form: Tprenatal_form
       DataController.Summary.SummaryGroups = <>
       Filtering.ColumnFilteredItemsList = True
       OptionsData.Appending = True
+      OptionsData.CancelOnExit = False
+      OptionsData.Deleting = False
+      OptionsData.DeletingConfirmation = False
+      OptionsData.Editing = False
+      OptionsData.Inserting = False
       OptionsView.GroupByBox = False
       object show_visitDBTableView1BDATE: TcxGridDBColumn
         DataBinding.FieldName = 'BDATE'
@@ -148,6 +147,7 @@ object prenatal_form: Tprenatal_form
       ''
       'GROUP BY a.GA,l.GRAVIDA'
       'ORDER BY a.DATE_SERV desc')
+    ReadOnly = True
     Left = 272
     Top = 104
     ParamData = <

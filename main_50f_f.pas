@@ -5,7 +5,12 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters,
-  dxRibbonSkins, dxBar, cxClasses, dxRibbon;
+  dxRibbonSkins, dxBar, cxClasses, dxRibbon, RzButton, ExtCtrls, cxStyles,
+  cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit, cxNavigator, DB,
+  cxDBData, cxGridCustomTableView, cxGridTableView, cxGridDBTableView, DBAccess,
+  MyAccess, MemDS, cxGridLevel, cxGridCustomView, cxGrid, StdCtrls, dblookup,
+  cxContainer, cxTextEdit, cxMaskEdit, cxDropDownEdit, cxLookupEdit,
+  cxDBLookupEdit, cxDBLookupComboBox;
 
 type
   Tmain_50f_form = class(TForm)
@@ -50,6 +55,23 @@ type
     dxBarButton31: TdxBarButton;
     dxBarButton32: TdxBarButton;
     dxBarButton33: TdxBarButton;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    RzBitBtn1: TRzBitBtn;
+    cxGrid1: TcxGrid;
+    cxGridDBTableView1: TcxGridDBTableView;
+    cxGridLevel1: TcxGridLevel;
+    MyQuery: TMyQuery;
+    MyData: TMyDataSource;
+    cxGridDBTableView1FILE: TcxGridDBColumn;
+    cxGridDBTableView1TOTAL: TcxGridDBColumn;
+    cxGridDBTableView1ERR: TcxGridDBColumn;
+    cxGridDBTableView1BYEAR: TcxGridDBColumn;
+    cxGridDBTableView1per: TcxGridDBColumn;
+    year: TComboBox;
+    procedure RzBitBtn1Click(Sender: TObject);
+    procedure yearSelect(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -61,6 +83,29 @@ var
 
 implementation
 
+uses data_modune;
+
 {$R *.dfm}
+
+procedure Tmain_50f_form.FormShow(Sender: TObject);
+begin
+MyQuery.Close;
+MyQuery.Params.ParamValues['byear'] :=  year.Text;
+//showmessage(year.Text);
+MyQuery.Open;
+end;
+
+procedure Tmain_50f_form.RzBitBtn1Click(Sender: TObject);
+begin
+close;
+end;
+
+procedure Tmain_50f_form.yearSelect(Sender: TObject);
+begin
+MyQuery.Close;
+MyQuery.Params.ParamValues['byear'] :=  year.Text;
+//showmessage(year.Text);
+MyQuery.Open;
+end;
 
 end.

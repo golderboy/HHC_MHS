@@ -72,7 +72,11 @@ object epi_form: Tepi_form
       DataController.Summary.FooterSummaryItems = <>
       DataController.Summary.SummaryGroups = <>
       Filtering.ColumnFilteredItemsList = True
-      OptionsData.Appending = True
+      OptionsData.CancelOnExit = False
+      OptionsData.Deleting = False
+      OptionsData.DeletingConfirmation = False
+      OptionsData.Editing = False
+      OptionsData.Inserting = False
       OptionsView.GroupByBox = False
       object show_visitDBTableView1DATE_SERV: TcxGridDBColumn
         DataBinding.FieldName = 'DATE_SERV'
@@ -119,6 +123,7 @@ object epi_form: Tepi_form
       '#WHERE p.cid = 1580400093085'
       ''
       'ORDER BY e.DATE_SERV desc')
+    ReadOnly = True
     Left = 272
     Top = 104
     ParamData = <

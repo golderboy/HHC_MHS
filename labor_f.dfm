@@ -94,7 +94,11 @@ object labor_form: Tlabor_form
       DataController.Summary.FooterSummaryItems = <>
       DataController.Summary.SummaryGroups = <>
       Filtering.ColumnFilteredItemsList = True
-      OptionsData.Appending = True
+      OptionsData.CancelOnExit = False
+      OptionsData.Deleting = False
+      OptionsData.DeletingConfirmation = False
+      OptionsData.Editing = False
+      OptionsData.Inserting = False
       OptionsView.GroupByBox = False
       object show_visitDBTableView1BDATE: TcxGridDBColumn
         DataBinding.FieldName = 'BDATE'
@@ -152,6 +156,7 @@ object labor_form: Tlabor_form
       '#WHERE p.cid = 3580400525259'
       ''
       'ORDER BY l.BDATE,p.cid desc')
+    ReadOnly = True
     Left = 272
     Top = 104
     ParamData = <

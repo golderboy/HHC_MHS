@@ -3,7 +3,7 @@ object main_50f_form: Tmain_50f_form
   Top = 0
   Caption = 'HHC_MHS Bata'
   ClientHeight = 534
-  ClientWidth = 992
+  ClientWidth = 781
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,22 +12,21 @@ object main_50f_form: Tmain_50f_form
   Font.Style = []
   OldCreateOrder = False
   WindowState = wsMaximized
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object dxRibbon1: TdxRibbon
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 986
+    Width = 775
     Height = 126
     BarManager = BarManager
     ColorSchemeName = 'Blue'
     Contexts = <>
     TabOrder = 0
     TabStop = False
-    ExplicitLeft = 0
-    ExplicitTop = 0
-    ExplicitWidth = 763
+    ExplicitWidth = 986
     object dxRibbon1Tab1: TdxRibbonTab
       Active = True
       Caption = '50 '#3649#3615#3657#3617
@@ -44,6 +43,159 @@ object main_50f_form: Tmain_50f_form
       Index = 0
     end
   end
+  object Panel1: TPanel
+    Left = 0
+    Top = 132
+    Width = 781
+    Height = 38
+    Align = alTop
+    TabOrder = 5
+    object year: TComboBox
+      Left = 64
+      Top = 3
+      Width = 145
+      Height = 21
+      ItemIndex = 0
+      TabOrder = 0
+      Text = '2560'
+      OnSelect = yearSelect
+      Items.Strings = (
+        '2560'
+        '2559'
+        '2558'
+        '2557')
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 493
+    Width = 781
+    Height = 41
+    Align = alBottom
+    TabOrder = 6
+    ExplicitLeft = 432
+    ExplicitTop = 400
+    ExplicitWidth = 185
+    DesignSize = (
+      781
+      41)
+    object RzBitBtn1: TRzBitBtn
+      Left = 688
+      Top = 8
+      Anchors = [akRight, akBottom]
+      Caption = 'Exit'
+      TabOrder = 0
+      OnClick = RzBitBtn1Click
+      Glyph.Data = {
+        36060000424D3606000000000000360400002800000020000000100000000100
+        08000000000000020000730B0000730B00000001000000000000000000003300
+        00006600000099000000CC000000FF0000000033000033330000663300009933
+        0000CC330000FF33000000660000336600006666000099660000CC660000FF66
+        000000990000339900006699000099990000CC990000FF99000000CC000033CC
+        000066CC000099CC0000CCCC0000FFCC000000FF000033FF000066FF000099FF
+        0000CCFF0000FFFF000000003300330033006600330099003300CC003300FF00
+        330000333300333333006633330099333300CC333300FF333300006633003366
+        33006666330099663300CC663300FF6633000099330033993300669933009999
+        3300CC993300FF99330000CC330033CC330066CC330099CC3300CCCC3300FFCC
+        330000FF330033FF330066FF330099FF3300CCFF3300FFFF3300000066003300
+        66006600660099006600CC006600FF0066000033660033336600663366009933
+        6600CC336600FF33660000666600336666006666660099666600CC666600FF66
+        660000996600339966006699660099996600CC996600FF99660000CC660033CC
+        660066CC660099CC6600CCCC6600FFCC660000FF660033FF660066FF660099FF
+        6600CCFF6600FFFF660000009900330099006600990099009900CC009900FF00
+        990000339900333399006633990099339900CC339900FF339900006699003366
+        99006666990099669900CC669900FF6699000099990033999900669999009999
+        9900CC999900FF99990000CC990033CC990066CC990099CC9900CCCC9900FFCC
+        990000FF990033FF990066FF990099FF9900CCFF9900FFFF99000000CC003300
+        CC006600CC009900CC00CC00CC00FF00CC000033CC003333CC006633CC009933
+        CC00CC33CC00FF33CC000066CC003366CC006666CC009966CC00CC66CC00FF66
+        CC000099CC003399CC006699CC009999CC00CC99CC00FF99CC0000CCCC0033CC
+        CC0066CCCC0099CCCC00CCCCCC00FFCCCC0000FFCC0033FFCC0066FFCC0099FF
+        CC00CCFFCC00FFFFCC000000FF003300FF006600FF009900FF00CC00FF00FF00
+        FF000033FF003333FF006633FF009933FF00CC33FF00FF33FF000066FF003366
+        FF006666FF009966FF00CC66FF00FF66FF000099FF003399FF006699FF009999
+        FF00CC99FF00FF99FF0000CCFF0033CCFF0066CCFF0099CCFF00CCCCFF00FFCC
+        FF0000FFFF0033FFFF0066FFFF0099FFFF00CCFFFF00FFFFFF00000080000080
+        000000808000800000008000800080800000C0C0C00080808000191919004C4C
+        4C00B2B2B200E5E5E500C8AC2800E0CC6600F2EABF00B59B2400D8E9EC009933
+        6600D075A300ECC6D900646F710099A8AC00E2EFF10000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000E8E8E8E8E8E8
+        EEE8E8E8E8E8E8E8E8E8E8E8E8E8E8E8EEE8E8E8E8E8E8E8E8E8E8E8E8EEE3AC
+        E3EEE8E8E8E8E8E8E8E8E8E8E8EEE8ACE3EEE8E8E8E8E8E8E8E8E8EEE3E28257
+        57E2ACE3EEE8E8E8E8E8E8EEE8E2818181E2ACE8EEE8E8E8E8E8E382578282D7
+        578181E2E3E8E8E8E8E8E881818181D7818181E2E8E8E8E8E8E857828989ADD7
+        57797979EEE8E8E8E8E88181DEDEACD781818181EEE8E8E8E8E857898989ADD7
+        57AAAAA2D7ADE8E8E8E881DEDEDEACD781DEDE81D7ACE8E8E8E857898989ADD7
+        57AACEA3AD10E8E8E8E881DEDEDEACD781DEAC81AC81E8E8E8E85789825EADD7
+        57ABCFE21110E8E8E8E881DE8181ACD781ACACE28181E8E8E8E8578957D7ADD7
+        57ABDE101010101010E881DE56D7ACD781ACDE818181818181E857898257ADD7
+        57E810101010101010E881DE8156ACD781E381818181818181E857898989ADD7
+        57E882101010101010E881DEDEDEACD781E381818181818181E857898989ADD7
+        57ACEE821110E8E8E8E881DEDEDEACD781ACEE818181E8E8E8E857898989ADD7
+        57ABE8AB8910E8E8E8E881DEDEDEACD781ACE3ACDE81E8E8E8E857828989ADD7
+        57ACE8A3E889E8E8E8E88181DEDEACD781ACE381E8DEE8E8E8E8E8DE5E8288D7
+        57A2A2A2E8E8E8E8E8E8E8DE8181DED781818181E8E8E8E8E8E8E8E8E8AC8257
+        57E8E8E8E8E8E8E8E8E8E8E8E8AC818181E8E8E8E8E8E8E8E8E8}
+      NumGlyphs = 2
+    end
+  end
+  object cxGrid1: TcxGrid
+    AlignWithMargins = True
+    Left = 3
+    Top = 173
+    Width = 775
+    Height = 317
+    Align = alClient
+    Font.Charset = THAI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 7
+    ExplicitTop = 36
+    ExplicitWidth = 749
+    ExplicitHeight = 456
+    object cxGridDBTableView1: TcxGridDBTableView
+      Navigator.Buttons.CustomButtons = <>
+      DataController.DataSource = MyData
+      DataController.Summary.DefaultGroupSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <>
+      DataController.Summary.SummaryGroups = <>
+      Filtering.ColumnFilteredItemsList = True
+      OptionsData.CancelOnExit = False
+      OptionsData.Deleting = False
+      OptionsData.DeletingConfirmation = False
+      OptionsData.Editing = False
+      OptionsData.Inserting = False
+      OptionsView.ColumnAutoWidth = True
+      OptionsView.GroupByBox = False
+      object cxGridDBTableView1BYEAR: TcxGridDBColumn
+        DataBinding.FieldName = 'BYEAR'
+        Width = 98
+      end
+      object cxGridDBTableView1FILE: TcxGridDBColumn
+        DataBinding.FieldName = 'FILE'
+        Width = 295
+      end
+      object cxGridDBTableView1TOTAL: TcxGridDBColumn
+        DataBinding.FieldName = 'TOTAL'
+        Width = 122
+      end
+      object cxGridDBTableView1ERR: TcxGridDBColumn
+        DataBinding.FieldName = 'ERR'
+        Width = 99
+      end
+      object cxGridDBTableView1per: TcxGridDBColumn
+        DataBinding.FieldName = 'per'
+        Width = 142
+      end
+    end
+    object cxGridLevel1: TcxGridLevel
+      GridView = cxGridDBTableView1
+    end
+  end
   object BarManager: TdxBarManager
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -58,8 +210,8 @@ object main_50f_form: Tmain_50f_form
       True)
     PopupMenuLinks = <>
     UseSystemFont = True
-    Left = 24
-    Top = 136
+    Left = 160
+    Top = 40
     DockControlHeights = (
       0
       0
@@ -640,5 +792,41 @@ object main_50f_form: Tmain_50f_form
       Hint = 'ICF'
       Visible = ivAlways
     end
+  end
+  object MyQuery: TMyQuery
+    Connection = DataModule1.connect_db
+    SQL.Strings = (
+      '#SET @byear := :byear;'
+      ''
+      
+        'SELECT BYEAR,FILE,sum(TOTAL) as '#39'TOTAL'#39',sum(ERR) as '#39'ERR'#39',FORMAT' +
+        '((( ( (sum(TOTAL))-(sum(ERR)) )*100)/(sum(TOTAL))),2) as '#39'per'#39
+      'from err_zall'
+      'WHERE BYEAR = :byear'
+      'GROUP BY FILE,BYEAR'
+      ''
+      'UNION ALL'
+      ''
+      
+        'SELECT BYEAR,'#39#3619#3623#3617#39',sum(TOTAL) as '#39'TOTAL'#39',sum(ERR) as '#39'ERR'#39',FORMA' +
+        'T((( ( (sum(TOTAL))-(sum(ERR)) )*100)/(sum(TOTAL))),2) as '#39'per'#39
+      'from err_zall'
+      'WHERE BYEAR = :byear')
+    Left = 440
+    Top = 208
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Byear'
+      end
+      item
+        DataType = ftUnknown
+        Name = 'byear'
+      end>
+  end
+  object MyData: TMyDataSource
+    DataSet = MyQuery
+    Left = 512
+    Top = 208
   end
 end

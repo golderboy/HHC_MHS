@@ -127,7 +127,6 @@ object main_unit_form: Tmain_unit_form
       Height = 34
       Anchors = [akTop, akRight]
       Caption = 'DHDC CHK'
-      Enabled = False
       TabOrder = 5
       OnClick = BitBtn6Click
     end
@@ -163,7 +162,11 @@ object main_unit_form: Tmain_unit_form
       DataController.Summary.FooterSummaryItems = <>
       DataController.Summary.SummaryGroups = <>
       Filtering.ColumnFilteredItemsList = True
-      OptionsData.Appending = True
+      OptionsData.CancelOnExit = False
+      OptionsData.Deleting = False
+      OptionsData.DeletingConfirmation = False
+      OptionsData.Editing = False
+      OptionsData.Inserting = False
       OptionsView.GroupByBox = False
       object show_visitDBTableView1HOSPCODE: TcxGridDBColumn
         DataBinding.FieldName = 'HOSPCODE'
@@ -228,6 +231,7 @@ object main_unit_form: Tmain_unit_form
       ''
       ''
       'ORDER BY  p.`NAME`,p.D_UPDATE asc')
+    ReadOnly = True
     Left = 272
     Top = 104
     ParamData = <

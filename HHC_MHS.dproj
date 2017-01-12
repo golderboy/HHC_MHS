@@ -59,9 +59,6 @@
 			<DCCReference Include="chronic_f.pas">
 				<Form>chronic_form</Form>
 			</DCCReference>
-			<DCCReference Include="main_chronic_f.pas">
-				<Form>main_chronic_form</Form>
-			</DCCReference>
 			<DCCReference Include="miniEMR_f.pas">
 				<Form>miniEMR_form</Form>
 			</DCCReference>
@@ -91,6 +88,9 @@
 			</DCCReference>
 			<DCCReference Include="postnatal_f.pas">
 				<Form>postnatal_form</Form>
+			</DCCReference>
+			<DCCReference Include="err_anc.pas">
+				<Form>err_anc_f</Form>
 			</DCCReference>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>

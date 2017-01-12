@@ -8,13 +8,11 @@ uses
   cxStyles, cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit, cxNavigator,
   DB, cxDBData, cxGridLevel, cxGridCustomTableView, cxGridTableView,
   cxGridDBTableView, cxClasses, cxGridCustomView, cxGrid, StdCtrls, Buttons,
-  ExtCtrls, JvExControls, JvNavigationPane, DBAccess, MyAccess, MemDS;
+  ExtCtrls, JvExControls, JvNavigationPane, DBAccess, MyAccess, MemDS, RzButton;
 
 type
   Tchronic_form = class(TForm)
     JvNavPanelHeader1: TJvNavPanelHeader;
-    Panel2: TPanel;
-    BitBtn1: TBitBtn;
     show_visit: TcxGrid;
     show_visitDBTableView1: TcxGridDBTableView;
     show_visitLevel1: TcxGridLevel;
@@ -32,11 +30,13 @@ type
     show_visitDBTableView1cid: TcxGridDBColumn;
     show_visitDBTableView1ptname: TcxGridDBColumn;
     show_visitDBTableView1sexname: TcxGridDBColumn;
-    BitBtn4: TBitBtn;
+    Panel1: TPanel;
+    RzBitBtn1: TRzBitBtn;
     procedure FormShow(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn4Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
+    procedure RzBitBtn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -79,6 +79,11 @@ begin
     S_chronic.Close;
     S_chronic.Params.ParamValues['cid'] := cid;
     S_chronic.Open;
+end;
+
+procedure Tchronic_form.RzBitBtn1Click(Sender: TObject);
+begin
+close;
 end;
 
 end.
