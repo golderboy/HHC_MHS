@@ -47,8 +47,16 @@ type
     cxGridDBTableView1DBP: TcxGridDBColumn;
     cxGridDBTableView1FOOT: TcxGridDBColumn;
     cxGridDBTableView1RETINA: TcxGridDBColumn;
+    BitBtn2: TBitBtn;
+    BitBtn3: TBitBtn;
+    BitBtn4: TBitBtn;
+    BitBtn5: TBitBtn;
     procedure BitBtn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
+    procedure BitBtn3Click(Sender: TObject);
+    procedure BitBtn4Click(Sender: TObject);
+    procedure BitBtn5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,6 +64,7 @@ type
     hospcode : string;
     pid : string;
     seq : string;
+    cid : string;
   end;
 
 var
@@ -63,13 +72,46 @@ var
 
 implementation
 
-uses connection_f, data_modune;
+uses connection_f, data_modune, chronic_f, labor_f, epi_f, drugallergy_f;
 
 {$R *.dfm}
 
 procedure TminiEMR_form.BitBtn1Click(Sender: TObject);
 begin
 close;
+end;
+
+
+procedure TminiEMR_form.BitBtn2Click(Sender: TObject);
+begin
+    chronic_form := Tchronic_form.Create(application);
+    chronic_form.cid := S_chronic.FieldByName('cid').AsString;
+    chronic_form.ShowModal;
+    chronic_form.Free;
+end;
+
+procedure TminiEMR_form.BitBtn3Click(Sender: TObject);
+begin
+    labor_form  := Tlabor_form.Create(application);
+    labor_form.cid := S_chronic.FieldByName('cid').AsString;
+    labor_form.ShowModal;
+    labor_form.Free;
+end;
+
+procedure TminiEMR_form.BitBtn4Click(Sender: TObject);
+begin
+    epi_form  := Tepi_form.Create(application);
+    epi_form.cid := S_chronic.FieldByName('cid').AsString;
+    epi_form.ShowModal;
+    epi_form.Free;
+end;
+
+procedure TminiEMR_form.BitBtn5Click(Sender: TObject);
+begin
+    drugallergy_form  := Tdrugallergy_form.Create(application);
+    drugallergy_form.cid := S_chronic.FieldByName('cid').AsString;
+    drugallergy_form.ShowModal;
+    drugallergy_form.Free;
 end;
 
 procedure TminiEMR_form.FormShow(Sender: TObject);

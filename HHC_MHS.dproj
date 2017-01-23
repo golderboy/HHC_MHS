@@ -24,6 +24,7 @@
 			<Base>true</Base>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>vclx;vcl;VclSmp;rtl;vclimg;svnui;svn;bdertl;TeeUI;TeeDB;Tee;vclactnband;vcldb;dbrtl;vcldbx;vcltouch;xmlrtl;dsnap;dsnapcon;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_110_150;Intraweb_110_150;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapClient;dbxcds;DataSnapServer;AzureCloud;DBXInterBaseDriver;DBXMySQLDriver;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;dacvcl150;dac150;mydacvcl150;mydac150;mysqlmon150;ZComponent150;ZDbc150;ZPlain150;ZCore150;ZParseSql150;DCPdelphiXE;RaizeComponentsVcl;RaizeComponentsVclDb;JclVcl;Jcl;JvCore;JvSystem;JvStdCtrls;JvAppFrm;JvBands;JvDB;JvDlgs;JvBDE;JvControls;JvCmp;JvCrypt;JvCustom;JvDocking;JvDotNetCtrls;JvGlobus;JvHMI;JvJans;JvManagedThreads;JvMM;JvNet;JvPageComps;JvPascalInterpreter;JclDeveloperTools;JvPluginSystem;JvPrintPreview;JvRuntimeDesign;JvTimeFramework;JvWizards;JvXPCtrls;JSDialogPack;dxCoreRS15;dxServerModeRS15;cxDataRS15;cxLibraryRS15;dxGDIPlusRS15;dxThemeRS15;dxADOServerModeRS15;dxDBXServerModeRS15;cxEditorsRS15;dxmdsRS15;dxBarRS15;dxComnRS15;dxBarDBNavRS15;dxBarExtDBItemsRS15;dxBarExtItemsRS15;dxRibbonRS15;cxBarEditItemRS15;dxdbtrRS15;dxtrmdRS15;cxPageControlRS15;dxDockingRS15;dxFlowChartRS15;cxPageControldxBarPopupMenuRS15;dxTabbedMDIRS15;dxLayoutControlRS15;dxNavBarRS15;dxorgcRS15;dxdborRS15;cxGridRS15;cxExportRS15;cxPivotGridRS15;cxPivotGridChartRS15;cxPivotGridOLAPRS15;cxTreeListRS15;cxTreeListdxBarPopupMenuRS15;cxSchedulerRS15;cxSchedulerGridRS15;dcldxSkinsCoreRS15;dxSkinsCoreRS15;dxSkinscxPCPainterRS15;dxSkinscxSchedulerPainterRS15;dxSkinsdxDLPainterRS15;dxSkinsdxBarPainterRS15;dxSkinsdxNavBarPainterRS15;dxSkinsdxRibbonPainterRS15;dxSpellCheckerRS15;cxSpreadSheetRS15;cxVerticalGridRS15;dxPSCoreRS15;dxPSLnksRS15;dxPScxCommonRS15;dxPScxExtCommonRS15;dxPScxGridLnkRS15;dxPSdxLCLnkRS15;dxPScxPivotGridLnkRS15;dxPScxSchedulerLnkRS15;dxPScxSSLnkRS15;dxPScxTLLnkRS15;dxPScxVGridLnkRS15;dxPSTeeChartRS15;dxPSDBTeeChartRS15;dxPSdxOCLnkRS15;dxPSdxDBOCLnkRS15;dxPSdxDBTVLnkRS15;dxPSdxFCLnkRS15;dxPScxPCProdRS15;dxPsPrVwAdvRS15;dxPSPrVwRibbonRS15;dxSkinBlackRS15;dxSkinBlueRS15;dxSkinCaramelRS15;dxSkinCoffeeRS15;dxSkinDarkRoomRS15;dxSkinDarkSideRS15;dxSkinFoggyRS15;dxSkinGlassOceansRS15;dxSkiniMaginaryRS15;dxSkinLilianRS15;dxSkinLiquidSkyRS15;dxSkinLondonLiquidSkyRS15;dxSkinMcSkinRS15;dxSkinMoneyTwinsRS15;dxSkinOffice2007BlackRS15;dxSkinOffice2007BlueRS15;dxSkinOffice2007GreenRS15;dxSkinOffice2007PinkRS15;dxSkinOffice2007SilverRS15;dxSkinOffice2010BlackRS15;dxSkinOffice2010BlueRS15;dxSkinOffice2010SilverRS15;dxSkinPumpkinRS15;dxSkinSevenRS15;dxSkinSharpRS15;dxSkinSilverRS15;dxSkinSpringTimeRS15;dxSkinStardustRS15;dxSkinSummer2008RS15;dxSkinValentineRS15;dxSkinXmas2008BlueRS15;dxSkinBlueprintRS15;dxSkinDevExpressDarkStyleRS15;dxSkinDevExpressStyleRS15;dxSkinHighContrastRS15;dxSkinSevenClassicRS15;dxSkinSharpPlusRS15;dxSkinTheAsphaltWorldRS15;dxSkinVS2010RS15;dxSkinWhiteprintRS15;dxTileControlRS15;JclContainers;frx15;fs15;frxcs15;frxe15;frxTee15;fsTee15;frxDB15;fsDB15;frxADO15;fsADO15;frxBDE15;fsBDE15;frxDBX15;frxIBX15;fsIBX15;dclRBE1515;rbCIDE1515;rbIDE1515;rbRCL1515;rbBDE1515;rbUSERDesign1515;rbUSER1515;rbDIDE1515;rbDAD1515;dclRBBDE1515;rbDBDE1515;rbDB1515;dclRBADO1515;rbADO1515;rbRIDE1515;rbRAP1515;rbTCUI1515;rbTC1515;dclRBIBE1515;rbIBE1515;dclRBDBE1515;rbDBE1515</DCC_UsePackage>
 			<DCC_ImageBase>00400000</DCC_ImageBase>
 			<DCC_DcuOutput>.\$(Config)\$(Platform)</DCC_DcuOutput>
 			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
@@ -92,6 +93,48 @@
 			<DCCReference Include="err_anc.pas">
 				<Form>err_anc_f</Form>
 			</DCCReference>
+			<DCCReference Include="err_person.pas">
+				<Form>err_person_f</Form>
+			</DCCReference>
+			<DCCReference Include="err_chronic.pas">
+				<Form>err_chronic_f</Form>
+			</DCCReference>
+			<DCCReference Include="err_code_maps.pas">
+				<Form>show_err</Form>
+			</DCCReference>
+			<DCCReference Include="person_f.pas">
+				<Form>person_maps_f</Form>
+			</DCCReference>
+			<DCCReference Include="err_disability.pas">
+				<Form>err_disability_f</Form>
+			</DCCReference>
+			<DCCReference Include="err_drugallergy.pas">
+				<Form>err_drugallergy_f</Form>
+			</DCCReference>
+			<DCCReference Include="err_epi.pas">
+				<Form>err_epi_f</Form>
+			</DCCReference>
+			<DCCReference Include="err_fp.pas">
+				<Form>err_fp_f</Form>
+			</DCCReference>
+			<DCCReference Include="err_prenatal.pas">
+				<Form>err_prenatal_f</Form>
+			</DCCReference>
+			<DCCReference Include="err_postnatal.pas">
+				<Form>err_postnatal_f</Form>
+			</DCCReference>
+			<DCCReference Include="err_labor.pas">
+				<Form>err_labor_f</Form>
+			</DCCReference>
+			<DCCReference Include="emr.pas">
+				<Form>emr_f</Form>
+			</DCCReference>
+			<DCCReference Include="err_newborn.pas">
+				<Form>err_newborn_f</Form>
+			</DCCReference>
+			<DCCReference Include="sql_text.pas">
+				<Form>sql_text_f</Form>
+			</DCCReference>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
@@ -141,6 +184,10 @@
 					<Source>
 						<Source Name="MainSource">HHC_MHS.dpr</Source>
 					</Source>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k150.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp150.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
 				</Delphi.Personality>
 				<Platforms>
 					<Platform value="Win32">True</Platform>

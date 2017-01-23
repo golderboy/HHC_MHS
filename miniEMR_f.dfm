@@ -42,13 +42,49 @@ object miniEMR_form: TminiEMR_form
       33)
     object BitBtn1: TBitBtn
       Left = 684
-      Top = 6
+      Top = 3
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'EXIT'
       TabOrder = 0
       OnClick = BitBtn1Click
+    end
+    object BitBtn2: TBitBtn
+      Left = 7
+      Top = 3
+      Width = 75
+      Height = 25
+      Caption = 'CHRONIC'
+      TabOrder = 1
+      OnClick = BitBtn2Click
+    end
+    object BitBtn3: TBitBtn
+      Left = 88
+      Top = 3
+      Width = 75
+      Height = 25
+      Caption = #3585#3634#3619#3605#3633#3657#3591#3588#3619#3619#3606#3660
+      TabOrder = 2
+      OnClick = BitBtn3Click
+    end
+    object BitBtn4: TBitBtn
+      Left = 169
+      Top = 3
+      Width = 75
+      Height = 25
+      Caption = #3623#3633#3588#3595#3637#3609
+      TabOrder = 3
+      OnClick = BitBtn4Click
+    end
+    object BitBtn5: TBitBtn
+      Left = 250
+      Top = 3
+      Width = 75
+      Height = 25
+      Caption = #3649#3614#3657#3618#3634
+      TabOrder = 4
+      OnClick = BitBtn5Click
     end
   end
   object Panel2: TPanel
@@ -266,7 +302,7 @@ object miniEMR_form: TminiEMR_form
   object S_chronic: TMyQuery
     Connection = DataModule1.connect_db
     SQL.Strings = (
-      'SELECT se.HOSPCODE,se.DATE_SERV,se.CHIEFCOMP,c.WEIGHT,'
+      'SELECT se.HOSPCODE,se.DATE_SERV,se.CHIEFCOMP,c.WEIGHT,p.cid,'
       'if(c.HEIGHT is null,'#39'-'#39',c.HEIGHT)as HEIGHT,'
       'if(c.WAIST_CM is null,'#39'-'#39',c.WAIST_CM)as WAIST_CM,'
       'if(c.SBP is null,se.SBP,c.SBP) as SBP,'
@@ -335,7 +371,7 @@ object miniEMR_form: TminiEMR_form
       'AND f.SEQ = :seq'
       'AND d1.DNAME != ""'
       ''
-      'GROUP BY f.hospcode,f.pid,f.SEQ'
+      '#GROUP BY f.hospcode,f.pid,f.SEQ'
       ''
       'UNION ALL'
       ''
@@ -361,7 +397,7 @@ object miniEMR_form: TminiEMR_form
       'AND a.SEQ = :seq'
       'AND d2.DNAME != ""'
       ''
-      'GROUP BY f.hospcode,f.pid,f.SEQ')
+      '#GROUP BY f.hospcode,f.pid,f.SEQ')
     Left = 520
     Top = 248
     ParamData = <

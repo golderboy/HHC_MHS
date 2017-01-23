@@ -1,6 +1,6 @@
 object f_login: Tf_login
-  Left = 0
-  Top = 0
+  Left = 390
+  Top = 219
   Caption = 'HHC_MHS Bata'
   ClientHeight = 286
   ClientWidth = 618
@@ -11,6 +11,7 @@ object f_login: Tf_login
   Font.Name = 'TH SarabunPSK'
   Font.Style = [fsBold]
   OldCreateOrder = False
+  Position = poDesigned
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 30

@@ -26,7 +26,6 @@ object main_50f_form: Tmain_50f_form
     Contexts = <>
     TabOrder = 0
     TabStop = False
-    ExplicitWidth = 986
     object dxRibbon1Tab1: TdxRibbonTab
       Active = True
       Caption = '50 '#3649#3615#3657#3617
@@ -49,9 +48,9 @@ object main_50f_form: Tmain_50f_form
     Width = 781
     Height = 38
     Align = alTop
-    TabOrder = 5
+    TabOrder = 1
     object year: TComboBox
-      Left = 64
+      Left = 79
       Top = 3
       Width = 145
       Height = 21
@@ -65,6 +64,11 @@ object main_50f_form: Tmain_50f_form
         '2558'
         '2557')
     end
+    object cxLabel1: TcxLabel
+      Left = 12
+      Top = 3
+      Caption = #3611#3637#3591#3610#3611#3619#3632#3617#3634#3603
+    end
   end
   object Panel2: TPanel
     Left = 0
@@ -72,10 +76,7 @@ object main_50f_form: Tmain_50f_form
     Width = 781
     Height = 41
     Align = alBottom
-    TabOrder = 6
-    ExplicitLeft = 432
-    ExplicitTop = 400
-    ExplicitWidth = 185
+    TabOrder = 2
     DesignSize = (
       781
       41)
@@ -154,14 +155,22 @@ object main_50f_form: Tmain_50f_form
     Font.Style = []
     ParentFont = False
     TabOrder = 7
-    ExplicitTop = 36
-    ExplicitWidth = 749
-    ExplicitHeight = 456
     object cxGridDBTableView1: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
+      OnCellDblClick = cxGridDBTableView1CellDblClick
       DataController.DataSource = MyData
       DataController.Summary.DefaultGroupSummaryItems = <>
-      DataController.Summary.FooterSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <
+        item
+          Format = '#,###'
+          Kind = skSum
+          Column = cxGridDBTableView1ERR
+        end
+        item
+          Format = '#,###'
+          Kind = skSum
+          Column = cxGridDBTableView1TOTAL
+        end>
       DataController.Summary.SummaryGroups = <>
       Filtering.ColumnFilteredItemsList = True
       OptionsData.CancelOnExit = False
@@ -170,6 +179,8 @@ object main_50f_form: Tmain_50f_form
       OptionsData.Editing = False
       OptionsData.Inserting = False
       OptionsView.ColumnAutoWidth = True
+      OptionsView.Footer = True
+      OptionsView.FooterMultiSummaries = True
       OptionsView.GroupByBox = False
       object cxGridDBTableView1BYEAR: TcxGridDBColumn
         DataBinding.FieldName = 'BYEAR'
@@ -611,6 +622,7 @@ object main_50f_form: Tmain_50f_form
       Category = 0
       Hint = 'PERSON'
       Visible = ivAlways
+      OnClick = dxBarButton3Click
     end
     object dxBarButton4: TdxBarButton
       Caption = 'New Button'
@@ -621,6 +633,7 @@ object main_50f_form: Tmain_50f_form
     object dxBarButton5: TdxBarButton
       Caption = 'WOMEN'
       Category = 0
+      Enabled = False
       Hint = 'WOMEN'
       Visible = ivAlways
     end
@@ -633,6 +646,7 @@ object main_50f_form: Tmain_50f_form
     object dxBarButton7: TdxBarButton
       Caption = 'STUDENT'
       Category = 0
+      Enabled = False
       Hint = 'STUDENT'
       Visible = ivAlways
     end
@@ -647,48 +661,56 @@ object main_50f_form: Tmain_50f_form
       Category = 0
       Hint = 'CHRONIC'
       Visible = ivAlways
+      OnClick = dxBarButton9Click
     end
     object dxBarButton10: TdxBarButton
       Caption = 'ANC'
       Category = 0
       Hint = 'ANC'
       Visible = ivAlways
+      OnClick = dxBarButton10Click
     end
     object dxBarButton11: TdxBarButton
       Caption = 'NEWBORN'
       Category = 0
       Hint = 'NEWBORN'
       Visible = ivAlways
+      OnClick = dxBarButton11Click
     end
     object dxBarButton12: TdxBarButton
       Caption = 'EPI'
       Category = 0
       Hint = 'EPI'
       Visible = ivAlways
+      OnClick = dxBarButton12Click
     end
     object dxBarButton13: TdxBarButton
       Caption = 'FP'
       Category = 0
       Hint = 'FP'
       Visible = ivAlways
+      OnClick = dxBarButton13Click
     end
     object dxBarButton14: TdxBarButton
-      Caption = 'LABON'
+      Caption = 'LABOR'
       Category = 0
-      Hint = 'LABON'
+      Hint = 'LABOR'
       Visible = ivAlways
+      OnClick = dxBarButton14Click
     end
     object dxBarButton15: TdxBarButton
       Caption = 'PRENATAL'
       Category = 0
       Hint = 'PRENATAL'
       Visible = ivAlways
+      OnClick = dxBarButton15Click
     end
     object dxBarButton16: TdxBarButton
       Caption = 'POSTNATAL'
       Category = 0
       Hint = 'POSTNATAL'
       Visible = ivAlways
+      OnClick = dxBarButton16Click
     end
     object dxBarButton17: TdxBarButton
       Caption = 'New Button'
@@ -747,6 +769,7 @@ object main_50f_form: Tmain_50f_form
     object dxBarButton26: TdxBarButton
       Caption = 'DEATH'
       Category = 0
+      Enabled = False
       Hint = 'DEATH'
       Visible = ivAlways
     end
@@ -767,12 +790,14 @@ object main_50f_form: Tmain_50f_form
       Category = 0
       Hint = 'DISABILITY'
       Visible = ivAlways
+      OnClick = dxBarButton29Click
     end
     object dxBarButton30: TdxBarButton
       Caption = 'DRUGALLERGY'
       Category = 0
       Hint = 'DRUGALLERGY'
       Visible = ivAlways
+      OnClick = dxBarButton30Click
     end
     object dxBarButton31: TdxBarButton
       Caption = 'REHABILITATION'
@@ -803,22 +828,11 @@ object main_50f_form: Tmain_50f_form
         '((( ( (sum(TOTAL))-(sum(ERR)) )*100)/(sum(TOTAL))),2) as '#39'per'#39
       'from err_zall'
       'WHERE BYEAR = :byear'
-      'GROUP BY FILE,BYEAR'
-      ''
-      'UNION ALL'
-      ''
-      
-        'SELECT BYEAR,'#39#3619#3623#3617#39',sum(TOTAL) as '#39'TOTAL'#39',sum(ERR) as '#39'ERR'#39',FORMA' +
-        'T((( ( (sum(TOTAL))-(sum(ERR)) )*100)/(sum(TOTAL))),2) as '#39'per'#39
-      'from err_zall'
-      'WHERE BYEAR = :byear')
+      ' '
+      'GROUP BY FILE,BYEAR')
     Left = 440
     Top = 208
     ParamData = <
-      item
-        DataType = ftUnknown
-        Name = 'Byear'
-      end
       item
         DataType = ftUnknown
         Name = 'byear'

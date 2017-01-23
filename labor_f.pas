@@ -8,20 +8,16 @@ uses
   cxStyles, cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit, cxNavigator,
   DB, cxDBData, DBAccess, MyAccess, MemDS, cxGridLevel, cxGridCustomTableView,
   cxGridTableView, cxGridDBTableView, cxClasses, cxGridCustomView, cxGrid,
-  StdCtrls, Buttons, ExtCtrls, JvExControls, JvNavigationPane;
+  StdCtrls, Buttons, ExtCtrls, JvExControls, JvNavigationPane, RzButton;
 
 type
   Tlabor_form = class(TForm)
     JvNavPanelHeader1: TJvNavPanelHeader;
-    Panel2: TPanel;
-    BitBtn1: TBitBtn;
-    BitBtn4: TBitBtn;
-    BitBtn2: TBitBtn;
     show_visit: TcxGrid;
     show_visitDBTableView1: TcxGridDBTableView;
     show_visitLevel1: TcxGridLevel;
-    QService: TMyQuery;
-    DService: TMyDataSource;
+    Qlabor: TMyQuery;
+    Dlabor: TMyDataSource;
     show_visitDBTableView1BDATE: TcxGridDBColumn;
     show_visitDBTableView1BHOSP: TcxGridDBColumn;
     show_visitDBTableView1EDC: TcxGridDBColumn;
@@ -31,10 +27,39 @@ type
     show_visitDBTableView1BRESULT: TcxGridDBColumn;
     show_visitDBTableView1SBORN: TcxGridDBColumn;
     show_visitDBTableView1LBORN: TcxGridDBColumn;
+    Panel1: TPanel;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    cxGrid1: TcxGrid;
+    cxGridDBTableView1: TcxGridDBTableView;
+    cxGridDBColumn1: TcxGridDBColumn;
+    cxGridDBColumn2: TcxGridDBColumn;
+    show_visitDBTableView1GA: TcxGridDBColumn;
+    show_visitDBTableView1DATE_SERV: TcxGridDBColumn;
+    show_visitDBTableView1DATE_HCT: TcxGridDBColumn;
+    show_visitDBTableView1HB_RESULT: TcxGridDBColumn;
+    show_visitDBTableView1HCT_RESULT: TcxGridDBColumn;
+    show_visitDBTableView1HIV_RESULT: TcxGridDBColumn;
+    show_visitDBTableView1VDRL_RESULT: TcxGridDBColumn;
+    show_visitDBTableView1THALASSEMIA: TcxGridDBColumn;
+    cxGridLevel1: TcxGridLevel;
+    Qprenatal: TMyQuery;
+    Dprenatal: TMyDataSource;
+    Panel2: TPanel;
+    cxGrid2: TcxGrid;
+    cxGridDBTableView2: TcxGridDBTableView;
+    cxGridDBTableView1BDATE: TcxGridDBColumn;
+    cxGridDBTableView1GRAVIDA: TcxGridDBColumn;
+    cxGridDBTableView1PPCARE: TcxGridDBColumn;
+    cxGridDBTableView1PPPLACE: TcxGridDBColumn;
+    cxGridDBTableView1PPRESULT: TcxGridDBColumn;
+    cxGridLevel2: TcxGridLevel;
+    Qpostnatal: TMyQuery;
+    Dpostnatal: TMyDataSource;
+    RzBitBtn1: TRzBitBtn;
     procedure FormShow(Sender: TObject);
     procedure BitBtn4Click(Sender: TObject);
-    procedure BitBtn1Click(Sender: TObject);
-    procedure BitBtn2Click(Sender: TObject);
+    procedure RzBitBtn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,22 +76,6 @@ uses data_modune, prenatal_f, postnatal_f;
 
 {$R *.dfm}
 
-procedure Tlabor_form.BitBtn1Click(Sender: TObject);
-begin
-    prenatal_form  := Tprenatal_form.Create(application);
-    prenatal_form.cid := QService.FieldByName('cid').AsString;
-    prenatal_form.ShowModal;
-    prenatal_form.Free;
-end;
-
-procedure Tlabor_form.BitBtn2Click(Sender: TObject);
-begin
-    postnatal_form  := Tpostnatal_form.Create(application);
-    postnatal_form.cid := QService.FieldByName('cid').AsString;
-    postnatal_form.ShowModal;
-    postnatal_form.Free;
-end;
-
 procedure Tlabor_form.BitBtn4Click(Sender: TObject);
 begin
 close;
@@ -74,9 +83,20 @@ end;
 
 procedure Tlabor_form.FormShow(Sender: TObject);
 begin
-    QService.Close;
-    QService.Params.ParamValues['cid'] := cid;
-    QService.Open;
+    Qlabor.Close;
+    Qpostnatal.Close;
+    Qprenatal.close;
+    Qlabor.Params.ParamValues['cid'] := cid;
+    Qpostnatal.Params.ParamValues['cid'] := cid;
+    Qprenatal.Params.ParamValues['cid'] := cid;
+    Qlabor.Open;
+    Qpostnatal.Open;
+    Qprenatal.Open;
+end;
+
+procedure Tlabor_form.RzBitBtn1Click(Sender: TObject);
+begin
+close;
 end;
 
 end.
